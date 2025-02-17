@@ -1,0 +1,23 @@
+using System;
+
+struct Triangle {
+    public int Base, Height;
+    
+    public Triangle (int side, int height) {
+        Base = side;
+        Height = height;
+    }
+
+    public float GetArea() {
+        return ((Base * Height) / 2);
+    }
+}
+
+class Program {
+    static void Main(string[] args) {
+        Triangle triangle1 = new Triangle(5, 13);
+        
+        Console.WriteLine($"Triangle has a Base of {triangle1.Base} and a height of {triangle1.Height}. Area is {triangle1.GetArea()}");
+    }
+}
+
