@@ -15,9 +15,9 @@ struct Triangle {
 
 class Program {
     static void Main(string[] args) {
-        Triangle triangle1 = new Triangle(5, 13);
+        Triangle triangle1 = new Triangle(5, 12);
         
-        Console.WriteLine($"Triangle has a Base of {triangle1.Base} and a height of {triangle1.Height}. Area is {triangle1.GetArea()}");
+        Console.WriteLine($"Triangle has a Base of {triangle1.Base} and a height of {triangle1.Height}. Area is {triangle1.GetArea()}.");
     }
 }
 
