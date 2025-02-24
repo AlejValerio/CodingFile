@@ -1,0 +1,28 @@
+using System;
+
+class Program {
+    static void Main(string arg[]) {
+        Console.Write("Enter the first number: ");
+        string num1Input = Console.ReadLine();
+        Console.Write("Enter second number: ");
+        string num2Input = Console.ReadLine();
+
+        try {
+            int num1 = int.Parse(num1Input);
+            int num2 = int.Parse(num2Input);
+
+            if (num2 == 0) {
+                throw new DivideByZeroException();
+            }
+
+            int result = num1 / num2;
+            Console.WriteLine("$"Result: {result}");
+        }
+        catch (FormatException) {
+            Console.WriteLine("Invalid input format. Please enter numbers only.");
+        }
+        catch (DivideByZeroException) {
+            Console.WriteLine("Cannot divide by xero.");
+        }
+    }
+}
